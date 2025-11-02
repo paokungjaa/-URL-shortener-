@@ -8,4 +8,40 @@
 
 .inputcontainer h1{
   font-family: 'Playfair Display', serif;
+  font-size: 4rem;
 }
+.inputcontainer h1 span{
+  color: var(--primary-color);
+}
+
+.inputcontainer input{
+  width: 100%;
+  padding: 0.5rem 0.2rem 0.5rem 0;
+  text-indent: 2rem;
+  border: none;
+  outline: none;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  background-color: bisque;
+}
+.inputcontainer div{
+  display: flex;
+  margin-bottom: 2rem;
+}
+.inputcontainer button{
+  padding: 0 1rem;
+ margin-left: 2rem;
+ font-size: 1rem;
+ height: 2rem;
+ font-weight: bold;
+border-radius: 3px;
+ text-transform: uppercase;
+ border: none;
+ color: white;
+ background-color: var(--secondary-color);
+ cursor: pointer;
+}
+.inputcontainer input::placeholder{
+  font-size: 1rem;
+}
+
