@@ -194,8 +194,8 @@ body {
   background-color: #cc5c00;
   transform: scale(1.05);
 }
-.result button:active{
-  background-color: #e67300;
+.result button.copied{
+   background-color: #e67300;
   transform: scale(0.97);
   color: white;
 }
