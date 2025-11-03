@@ -8,6 +8,7 @@ const LinkForm = ({ inputValue }) => {
   const [copied, setCopied] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  
 
   useEffect(() => {
     const timer = setTimeout(() => setCopied(false), 1000);
@@ -60,9 +61,7 @@ const LinkForm = ({ inputValue }) => {
               {copied ? 'Copied!' : 'Copy the link'}
             </button>
           </CopyToClipboard>
-           <div className="qr-wrapper">
-              <QRCodeCanvas value={shortenLink} size={150} />
-          </div>
+
         </>
       )}
     </div>

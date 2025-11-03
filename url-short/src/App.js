@@ -3,7 +3,6 @@ import './App.css';
 import BackgroundAnimate from './BackgroundAnimate';
 import InputShortener from './InputShortener';
 import LinkForm from './LinkForm';
-import QRCodeDisplay from './QRcode'
 
 function App() {
   const[inputValue, setinputValue] = useState("");
@@ -14,7 +13,7 @@ function App() {
     <InputShortener setinputValue={setinputValue} />
     <BackgroundAnimate/>
     <LinkForm inputValue={inputValue} setShortenLink={setShortenLink} />
-    <QRCodeDisplay value={shortenLink} />
+   
   </div>
   );
 }
