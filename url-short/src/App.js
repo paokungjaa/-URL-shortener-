@@ -6,13 +6,13 @@ import LinkForm from './LinkForm';
 
 function App() {
   const[inputValue, setinputValue] = useState("");
-    const [shortenLink, setShortenLink] = useState(''); 
+    
 
   return (
   <div className="container">
     <InputShortener setinputValue={setinputValue} />
     <BackgroundAnimate/>
-    <LinkForm inputValue={inputValue} setShortenLink={setShortenLink} />
+    <LinkForm inputValue={inputValue} />
    
   </div>
   );

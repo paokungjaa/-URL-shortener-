@@ -172,20 +172,26 @@ body {
 .result{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-  
-}
-.result p{
-
-  padding: 0.5rem 1rem;
-  margin-right: 0.5rem;
+  display: flex;
+  flex-direction: column; 
   justify-content: center;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;}
+.result-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; 
+}
+
+
+.result p {
+  padding: 0.5rem 1rem;
   border: 3px solid var(--secondary-color);
   border-radius: 3px;
   font-size: 18px;
   color: white;
-  margin-right: 1rem;
+  margin: 0; /* remove margin so it's inline */
 }
 .result button{
   
@@ -211,4 +217,119 @@ body {
 
 }
 
+/* QR code styling*/
+.qr-container {
+  margin-top: 1.5rem;
+  
+  padding: 1rem;
+  border-radius: 12px;
+ 
+}
 
+.qr-container canvas {
+  border: 3px solid orange;
+  border-radius: 8px;
+  padding: 0.5rem;
+  background-color: white;
+}
+/*history tab */
+.history-container {
+  position: absolute;        
+  right: 2rem;
+  bottom: 2rem;
+  width: 320px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid rgb(114, 110, 103);
+  border-radius: 10px;
+  padding: 1rem;
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.3);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+}
+
+
+.history-container h3 {
+  display: inline-block;
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+.clear-btn {
+  float: right;
+  background-color: var(--secondary-color);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.clear-btn:hover {
+  background-color: #e67300;
+  transform: scale(1.05);
+}
+
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.75rem;
+  overflow-y: auto;
+}
+
+.history-item {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.history-item .original {
+  color: #ccc;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.history-item a {
+  color: orange;
+  font-weight: bold;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.history-item a:hover {
+  text-decoration: underline;
+}
+
+
+.history-container::-webkit-scrollbar {
+  width: 8px;
+}
+.history-container::-webkit-scrollbar-thumb {
+  background: rgb(114, 110, 103);
+  border-radius: 5px;
+}
+
+
+.clear-btn {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+}
+
+.clear-btn:hover {
+  background-color: #e67300;
+  transform: scale(1.05);
+}
