@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { QRCodeCanvas } from "qrcode.react";
 
 const LinkForm = ({ inputValue }) => {
   const [shortenLink, setShortenLink] = useState('');
@@ -7,13 +8,13 @@ const LinkForm = ({ inputValue }) => {
   const [copied, setCopied] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  // Timer for Copy
+
   useEffect(() => {
     const timer = setTimeout(() => setCopied(false), 1000);
     return () => clearTimeout(timer);
   }, [copied]);
 
-  // Fetch shortened link when inputValue changes
+
   useEffect(() => {
     if (!inputValue) return;
 
@@ -37,7 +38,7 @@ const LinkForm = ({ inputValue }) => {
           setError(data.message || 'Failed to shorten the URL.');
         }
       } catch (err) {
-        setError('Something went wrong with the API.');
+        setError('Something went wrong');
       } finally {
         setLoading(false);
       }
@@ -59,6 +60,9 @@ const LinkForm = ({ inputValue }) => {
               {copied ? 'Copied!' : 'Copy the link'}
             </button>
           </CopyToClipboard>
+           <div className="qr-wrapper">
+              <QRCodeCanvas value={shortenLink} size={150} />
+          </div>
         </>
       )}
     </div>

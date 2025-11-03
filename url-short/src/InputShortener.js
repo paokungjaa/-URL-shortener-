@@ -10,7 +10,7 @@ const InputShortener = ({setinputValue}) => {
 
   return (
     <div className="inputcontainer">
-        <h1>URL<span> Shortener<span> Web application</span></span></h1>
+        <h1>URL<span> Shortener</span></h1>
         <div>
           <input type="text" placeholder="Paste a link here"
           value={value} onChange={e =>setValue(e.target.value)}
