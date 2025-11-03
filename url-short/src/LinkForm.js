@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const LinkForm = () => {
+  const [shortenLink, setShotenLink]= useState("Hello world");
   return (
-    <div>Link</div>
+    <div className="result"> 
+        <p>{shortenLink}</p>
+        <button>Copy the link</button>
+    </div>
   )
 }
 

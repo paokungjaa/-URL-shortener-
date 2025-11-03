@@ -1,3 +1,5 @@
+
+/* input board*/
 .container{
   height: 80vh;
   display: flex;
@@ -46,11 +48,24 @@ border-radius: 3px;
    height: auto;
   display: flex;
   align-items: center;
+
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.inputcontainer button:hover {
+  background-color: #e67300; 
+  transform: scale(1.05);   
+}
+
+
+.inputcontainer button:active {
+  background-color: #cc5c00; 
+  transform: scale(0.97);    
+  color: white;            
 }
 .inputcontainer input::placeholder{
   font-size: 1rem;
 }
-
 /*background*/
 * {
   margin: 0;
@@ -147,4 +162,40 @@ body {
     27vw 88vh 1px white, 35vw 72vh 2px white, 43vw 85vh 1px white,
     51vw 92vh 2px white, 59vw 78vh 1px white;
   animation: twinkle 6s infinite linear reverse;
+}
+
+/*result*/
+
+.result{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  
+}
+.result p{
+  background-color: bisque;
+  color: black;
+  border: 1px solid var(--secondary-color);
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  border-radius: 3px;
+}
+.result button{
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 3px;
+   transition: background-color 0.3s ease, transform 0.1s ease;
+}
+.result button:hover{
+  background-color: #cc5c00;
+  transform: scale(1.05);
+}
+.result button:active{
+  background-color: #e67300;
+  transform: scale(0.97);
+  color: white;
 }
