@@ -1,11 +1,21 @@
+import { useState } from "react"
 
 
-const InputShortener = () => {
+const InputShortener = ({setinputValue}) => {
+  const[value, setValue] = useState("");
+  const handleClick = () => {
+    setinputValue(value);
+    setValue("")
+  }
+
   return (
     <div className="inputcontainer">
         <h1>URL<span> Shortener</span></h1>
-        <div><input type="text" placeholder="Paste a link here"/>
-        <button>Shorten</button>
+        <div>
+          <input type="text" placeholder="Paste a link here"
+          value={value} onChange={e =>setValue(e.target.value)}
+          />
+        <button onClick={handleClick}>Shorten</button>
         </div>
     </div>
   )
