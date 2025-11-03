@@ -1,7 +1,7 @@
 import './App.css';
 import BackgroundAnimate from './BackgroundAnimate';
 import InputShortener from './InputShortener';
-import LinkFrom from './LinkFrom';
+import LinkFrom from './LinkForm';
 
 function App() {
   return (
